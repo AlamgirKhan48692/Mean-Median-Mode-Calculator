@@ -2,9 +2,9 @@
 
 A simple web application that calculates:
 
- . Mean
- . Median
- . Mode
+ * Mean
+ * Median
+ * Mode
 
 from a dataset entered by the user.
 
