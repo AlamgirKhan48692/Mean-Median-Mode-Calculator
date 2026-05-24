@@ -10,10 +10,10 @@ from a dataset entered by the user.
 
 Built using:
 
- . HTML
- . CSS
-JavaScript
-Features
+ * HTML
+ * CSS
+ * JavaScript
+# Features
 
 ✅ Calculate Mean
 
@@ -30,22 +30,22 @@ Features
 ✅ Animated result display using setTimeout()
 
 
-Preview
+# Preview
 
 Users enter numbers separated by commas:
 
-12,21,23,34,43,56,56,67,71
+  12,21,23,34,43,56,56,67,71
 
 The app then calculates:
 
-Mean
-Median
-Mode
+ * Mean
+ * Median
+ * Mode
 
 with detailed working steps.
 
 
-Project Structure
+# Project Structure
 
 project-folder/
 
@@ -55,51 +55,51 @@ project-folder/
 
 └── README.md
 
-How To Run Locally
+# How To Run Locally
 
-Download or clone the project
+1. Download or clone the project
 
 git clone (https://github.com/AlamgirKhan48692/Mean-Median-Mode-Calculator/blob/main/index.html)
 
-Open the folder
+2. Open the folder
 
-Run using Live Server or open index.html directly in browser
+3. Run using Live Server or open index.html directly in browser
 
-How To Use
+# How To Use
 
-Enter numbers separated by commas
+1. Enter numbers separated by commas
 
 
 Example:
 
 
-10,20,30,40,50
+ 10,20,30,40,50
 
-Click:
+2. Click:
 
-Calculate Mean
+  * Calculate Mean
 
-Calculate Median
+  * Calculate Median
 
-Calculate Mode
+  * Calculate Mode
 
-View results and calculation steps
+3. View results and calculation steps
 
-Technologies Used
+# Technologies Used
 
-HTML5
+ * HTML5
 
-CSS3
+ * CSS3
 
-Vanilla JavaScript
+ * Vanilla JavaScript
 
-Example Calculations
+# Example Calculations
 
 
 Dataset:
 
 
-12,21,23,34,43,56,56,67,71
+  12,21,23,34,43,56,56,67,71
 
 
 Results:
@@ -111,32 +111,32 @@ Median = 43
 
 Mode = 56
 
-Future Improvements
+# Future Improvements
 
-Dark mode
+ * Dark mode
 
-Better animations
+ * Better animations
 
-Standard deviation calculator
+ * Standard deviation calculator
 
-Data charts/graphs
+ * Data charts/graphs
 
-Mobile optimization
+ * Mobile optimization
 
-Deployment
+# Deployment
 
 
 
 You can deploy this project easily using:
 
 
-GitHub Pages
+ * GitHub Pages
 
-Netlify
+ * Netlify
 
-Vercel
+ * Vercel
 
-Author
+# Author
 
 
 Developed by Alamgir.
