@@ -18,12 +18,19 @@ JavaScript
 Features
 
 ✅ Calculate Mean
+
 ✅ Calculate Median
+
 ✅ Calculate Mode
+
 ✅ Step-by-step explanations
+
 ✅ Input validation
+
 ✅ Responsive UI
+
 ✅ Animated result display using setTimeout()
+
 
 Preview
 
@@ -46,7 +53,7 @@ project-folder/
 └── README.md
 How To Run Locally
 Download or clone the project
-git clone https://github.com/your-username/your-repository.git
+git clone (https://github.com/AlamgirKhan48692/Mean-Median-Mode-Calculator/blob/main/index.html)
 Open the folder
 Run using Live Server or open index.html directly in browser
 How To Use
