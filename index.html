@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="data:,">
+  
+  <title>Mean Median Mode Calculator</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 90%;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      background-color: #dfe8f3;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: black;
+      background-color: #dfe8f3;
+      padding: 5px;
+      display: none;
+    }
+
+    .messages {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: black;
+    border: black solid 2px;
+    padding: 10px;
+    display: none;
+    background-color: #dfe8f3;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Mean Median Mode Calculator</h2>
+
+    <input 
+      type="text" 
+      id="dataset" 
+      placeholder="Enter numbers separated by commas"
+    />
+
+    <br>
+
+    <button onclick="calculateMean()">
+      Calculate Mean
+    </button>
+
+    <br>
+
+    <div class="messages" id="meanresults"></div>
+
+    <div class="result" id="meanoutputs"></div><br>
+
+    <button onclick="calculatemedian()">
+      Calculate Median
+    </button><br>
+    
+    <div class="messages" id="medianresult"></div>
+    <div class="result" id="medianoutputs"></div><br>
+
+    <button onclick="calculateMode()">
+      Calculate Mode
+    </button>
+    
+    <div class="messages" id="moderesult"></div>
+    <div class="result" id="modeoutputs"></div>
+
+  </div>
+
+  <script>
+
+    let input = "";
+    let numbers = "";
+    let sum = "";
+
+    function calculateMean() {
+
+      // Get input value
+      input = document.getElementById("dataset").value; 
+
+      document.getElementById("meanresults").style.display = "block";
+      document.getElementById("meanoutputs").style.display = "block";
+
+      // Convert string into array
+      numbers = input.split(",").map(item => Number(item.trim()));
+
+      // Calculate total
+      sum = 0;
+
+      for (let i = 0; i < numbers.length; i++) {
+        if(isNaN(numbers[i]) || isNaN(numbers[i]) === ""){
+            alert("Please Enter valid numbers only!");
+            return;
+        }
+        sum += numbers[i];
+      }
+     
+      // Calculate mean
+      let mean = sum / numbers.length;
+
+
+     let results = document.getElementById("meanresults");
+
+     results.innerHTML = "<ol id='meanlist'></ol>";
+
+     let list = document.getElementById("meanlist");
+
+     setTimeout(() => {
+        list.innerHTML += `<li>You have (${numbers}) values</li><br>`;
+     });
+
+     setTimeout(() => {
+        list.innerHTML += `<li>Sum of values = ${sum}</li><br>`;
+     }, 2000);
+
+     setTimeout(() => {
+         list.innerHTML += `<li>Number of values = ${numbers.length}</li><br>`;
+     }, 4000);
+
+     setTimeout(() => {
+         list.innerHTML += `<li>Formula = ${sum} / ${numbers.length}</li><br>`;
+     }, 6000);
+
+     setTimeout(() => {
+         list.innerHTML += `<li>Mean = ${mean.toFixed(2)}</li>`;
+     }, 8000);
+
+      // Show result
+      document.getElementById("meanoutputs").innerHTML =
+        "5. Mean = " + mean.toFixed(2);
+    }
+
+
+    function calculatemedian(){
+
+    input = document.getElementById("dataset").value;
+
+    numbers = input
+      .split(",")
+      .map(item => Number(item.trim()));
+
+
+    if(numbers.some(item => item === "" || isNaN(item))){
+
+        alert("Please enter valid numbers only!");
+        return;
+    }
+
+    // Sort numbers
+    numbers.sort((a,b) => a - b );
+
+    // Find middle
+    let middle = Math.floor(numbers.length / 2);
+
+    let median;
+
+    // Even
+    if(numbers.length % 2 === 0){
+
+        median =
+          (numbers[middle - 1] + numbers[middle]) / 2;
+
+    }
+
+    // Odd
+    else{
+
+        median = numbers[middle];
+    }
+
+    let results =
+      document.getElementById("medianresult");
+
+    results.innerHTML =
+      "<ol id='medianlist'></ol>";
+
+    let list =
+      document.getElementById("medianlist");
+
+    // Step 1
+    setTimeout(() => {
+
+        list.innerHTML +=
+          `<li>You have (${numbers}) values</li><br>`;
+
+    });
+
+    // Step 2
+    setTimeout(() => {
+
+        list.innerHTML +=
+          `<li>Number of values = ${numbers.length}</li><br>`;
+
+    }, 2000);
+
+    // Step 3
+    if(numbers.length % 2 === 0){
+
+        setTimeout(() => {
+
+            list.innerHTML +=
+              `<li>Formula = (${numbers[middle - 1]} + ${numbers[middle]}) / 2</li><br>`;
+
+        }, 4000);
+
+    }
+
+    else{
+
+        setTimeout(() => {
+
+            list.innerHTML +=
+              `<li>Middle value = ${numbers[middle]}</li><br>`;
+
+        }, 4000);
+    }
+
+    // Step 4
+    setTimeout(() => {
+
+        list.innerHTML +=
+          `<li>Median = ${median.toFixed(2)}</li>`;
+
+    }, 6000);
+
+    // Show containers
+    document.getElementById("medianresult")
+      .style.display = "block";
+
+    document.getElementById("medianoutputs")
+      .style.display = "block";
+
+    // Final output
+    document.getElementById("medianoutputs").innerHTML =
+      "Median = " + median.toFixed(2);
+    }
+
+
+    function calculateMode() {
+
+    input = document.getElementById("dataset").value;
+
+    numbers = input
+      .split(",")
+      .map(item => item.trim());
+
+    // Validation
+    if(numbers.some(item => item === "" || isNaN(Number(item)))){
+
+        alert("Please enter valid numbers!");
+        return;
+    }
+
+    // Convert to numbers
+    numbers = numbers.map(item => Number(item));
+
+    // Frequency object
+    let frequency = {};
+
+    // Count frequency
+    for(let i = 0; i < numbers.length; i++) {
+
+        let num = numbers[i];
+
+        if(frequency[num]) {
+
+            frequency[num]++;
+
+        } else {
+
+            frequency[num] = 1;
+        }
+    }
+
+    // Find max frequency
+    let maxFrequency = 0;
+
+    for(let key in frequency) {
+
+        if(frequency[key] > maxFrequency) {
+
+            maxFrequency = frequency[key];
+        }
+    }
+
+    // Show containers
+    document.getElementById("moderesult").style.display = "block";
+
+    document.getElementById("modeoutputs").style.display =
+      "block";
+
+    // No mode case
+    if(maxFrequency === 1){
+
+        document.getElementById("modeoutputs").innerHTML =
+        "No Mode Found Because There is no Numbers that appear two or more time";
+
+        return;
+    }
+
+    // Find modes
+    let modes = [];
+
+    for(let key in frequency) {
+
+        if(frequency[key] === maxFrequency) {
+
+            modes.push(Number(key));
+        }
+    }
+
+    // Create list
+    let results = document.getElementById("moderesult");
+
+    results.innerHTML = "<ol id='modelist'></ol>";
+
+    let list = document.getElementById("modelist");
+
+    setTimeout(() => {
+        list.innerHTML += `<li>You have (${numbers}) values</li><br>`;
+    });
+
+    setTimeout(() => {
+        list.innerHTML += `<li>Number of values = ${numbers.length}</li><br>`;
+    }, 2000);
+
+    setTimeout(() => {
+        list.innerHTML += `<li>Formula = Take maximum appearing number</li><br>`;
+    }, 4000);
+
+    setTimeout(() => {
+        list.innerHTML += `<li>Mode = ${modes}</li>`;
+    }, 6000);
+
+    // Final result
+    document.getElementById("modeoutputs").innerHTML =
+      "Mode = " + modes.join(", ");
+}
+  </script>
+
+</body>
+</html>
