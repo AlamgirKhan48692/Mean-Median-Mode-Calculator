@@ -16,17 +16,11 @@ Built using:
 # Features
 
 ✅ Calculate Mean
-
 ✅ Calculate Median
-
 ✅ Calculate Mode
-
 ✅ Step-by-step explanations
-
 ✅ Input validation
-
 ✅ Responsive UI
-
 ✅ Animated result display using setTimeout()
 
 
@@ -56,14 +50,11 @@ project-folder/
 └── README.md
 
 # How To Run Locally
+## Download or clone the project
 
-1. Download or clone the project
-
-git clone (https://github.com/AlamgirKhan48692/Mean-Median-Mode-Calculator/blob/main/index.html)
-
-2. Open the folder
-
-3. Run using Live Server or open index.html directly in browser
+ git clone (https://github.com/AlamgirKhan48692/Mean-Median-Mode-       Calculator/blob/main/index.html)
+## Open the folder
+## Run using Live Server or open index.html directly in browser
 
 # How To Use
 
