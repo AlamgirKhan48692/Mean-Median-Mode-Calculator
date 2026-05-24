@@ -59,7 +59,7 @@ project-folder/
 # How To Run Locally
 ## Download or clone the project
 
- git clone (https://github.com/AlamgirKhan48692/Mean-Median-Mode-       Calculator/blob/main/index.html)
+ git clone (https://alamgirkhan48692.github.io/Mean-Median-Mode-Calculator/)
 ## Open the folder
  Run using Live Server or open index.html directly in browser
 
