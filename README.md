@@ -16,12 +16,19 @@ Built using:
 # Features
 
 ✅ Calculate Mean
+
 ✅ Calculate Median
+
 ✅ Calculate Mode
+
 ✅ Step-by-step explanations
+
 ✅ Input validation
+
 ✅ Responsive UI
+
 ✅ Animated result display using setTimeout()
+
 
 
 # Preview
@@ -54,27 +61,27 @@ project-folder/
 
  git clone (https://github.com/AlamgirKhan48692/Mean-Median-Mode-       Calculator/blob/main/index.html)
 ## Open the folder
-## Run using Live Server or open index.html directly in browser
+ Run using Live Server or open index.html directly in browser
 
 # How To Use
 
-1. Enter numbers separated by commas
+## Enter numbers separated by commas
 
 
 Example:
 
 
  10,20,30,40,50
-
-2. Click:
+ 
+## Click:
 
   * Calculate Mean
 
   * Calculate Median
 
   * Calculate Mode
-
-3. View results and calculation steps
+  * 
+## View results and calculation steps
 
 # Technologies Used
 
